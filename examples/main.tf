@@ -1,5 +1,5 @@
 module "rest-api-gateway" {
-  source             = "../api-gateway"
+  source             = ".."
   create-api-gateway = var.mod-create-api-gateway
   
   for_each           = var.rest-apis
