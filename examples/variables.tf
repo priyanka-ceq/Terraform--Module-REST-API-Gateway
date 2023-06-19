@@ -1,14 +1,3 @@
-variable "region" {
-  type        = string
-  description = "AWS Provider Region"
-}
-
-variable "rest-apis" {
-  type        = any
-  description = "Creating Multiple API Gateways using for_each"
-}
-
-variable "mod-create-api-gateway" {
-  type        = bool
-  description = "Whether to create API Gateway"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5416fda31b314df2820a941ad4206fa8e4d421d5fe19788c22f8fe1fd944225e
+size 313

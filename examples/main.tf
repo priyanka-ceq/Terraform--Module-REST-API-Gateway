@@ -1,18 +1,3 @@
-module "rest-api-gateway" {
-  source             = "../"
-  create-api-gateway = var.mod-create-api-gateway
-  
-  for_each           = var.rest-apis
-  rest-api-name        = each.value.mod-rest-api-name
-  rest-api-description = each.value.mod-rest-api-description
-  endpoint-config-type = each.value.mod-endpoint-config-type
-  path-part            = each.value.mod-path-part
-  http-method          = each.value.mod-http-method
-  authorization        = each.value.mod-authorization
-  integration-type     = each.value.mod-integration-type
-  request-template     = each.value.mod-request-template
-  status-code          = each.value.mod-status-code
-  response-template    = each.value.mod-response-template
-  stage-name           = each.value.mod-stage-name
-  tags                 = each.value.mod-tags
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3aef12d6bc2c5f0ea529149a06e37b590de472cca40003eacc3b51550cdfc1c9
+size 817
