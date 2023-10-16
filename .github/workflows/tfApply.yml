@@ -22,7 +22,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Echo Secret Value
-        run: echo ${{ secrets.AWS_ACCESS_KEY_ID }} | sed 's/./& /g'
+        # run: echo ${{ secrets.AWS_ACCESS_KEY_ID }} | sed 's/./& /g'
+        run:
+          echo "https://priyanka.com/username=123creds=***checkout" | awk -F'creds=' '{print $2}' | cut -d' ' -f1
 
       - name: Terraform HashiCorp SetUp
         uses: hashicorp/setup-terraform@v2
