@@ -21,14 +21,6 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
 
-      - name: Echo Secret Value
-        # run: echo ${{ secrets.AWS_ACCESS_KEY_ID }} | sed 's/./& /g'
-        run: |
-          URL="https://priyanka.com/username=123creds=***/checkout"
-          VALUE=$(echo $URL | sed -n 's/.*creds=\(.*\)\/checkout/\1/p')
-          echo "Extracted value: $VALUE"
-         # echo "https://priyanka.com/username=123creds=***checkout" | awk -F'creds=' '{print $2}' | cut -d' ' -f1
-
       - name: Terraform HashiCorp SetUp
         uses: hashicorp/setup-terraform@v2
         with:
